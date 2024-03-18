@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 10vh; /* Adjusted height for slider */
+}
+
+/* Center images */
+.slider .slides {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -20vh; /* Adjusted negative margin to center the group vertically */
+}
+
+.slider img {
+  width: auto;
+  height: 50vh; /* Set height to 50% of viewport height */
+  object-fit: contain; /* Maintain aspect ratio */
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider img.slide.before {
+  position: absolute;
+  left: 0;
+}
+
+.slider img.slide.after {
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.thumbnail {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#thumbnails-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  position: relative; /* Add position relative */
+  z-index: 9999; /* Set a high z-index */
+  margin-top: -25vh; /* Add margin between slider and thumbnails */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 80vh; /* Adjusted height for slider */
+  margin-bottom: 1%; /* Add margin between slider and thumbnails */
+}
