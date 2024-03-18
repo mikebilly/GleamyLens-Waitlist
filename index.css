@@ -31,7 +31,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -20vh; /* Adjusted negative margin to center the group vertically */
+  margin-top: -29vh;
 }
 
 .slider img {
@@ -65,9 +65,23 @@ body {
   justify-content: center;
   margin-top: 0px;
   position: relative; /* Add position relative */
-  z-index: 9999; /* Set a high z-index */
-  margin-top: -25vh; /* Add margin between slider and thumbnails */
+  z-index: 9998; /* Set a high z-index */
+  margin-top: -23vh; /* Add margin between slider and thumbnails */
 }
+
+.click-me {
+	font-family: 'Montserrat', sans-serif; /* Apply the 'Montserrat' font */
+	color: #007bff; /* Change text color to blue */
+	text-align: center;
+	font-size: 1.2rem;
+	margin: 4vh;
+	z-index: 9999;
+	cursor: pointer;
+	transition: transform 0.3s ease, color 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+  
 * {
   box-sizing: border-box;
   margin: 0;
