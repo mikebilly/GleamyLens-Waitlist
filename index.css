@@ -1,97 +1,78 @@
+/* Reset CSS */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 10vh; /* Adjusted height for slider */
+/* Header styles */
+header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Center images */
-.slider .slides {
-  position: relative;
-  height: 100vh; /* Full viewport height */
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.slider .group {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: -29vh;
+.logo h1 {
+  font-size: 2rem;
+  color: #fff;
 }
 
-.slider img {
-  width: auto;
-  height: 50vh; /* Set height to 50% of viewport height */
-  object-fit: contain; /* Maintain aspect ratio */
+.burger {
+  display: none;
   cursor: pointer;
-  transition: opacity 0.5s ease-in-out;
+  margin-left: 20px;
 }
 
-.slider img.slide.before {
-  position: absolute;
-  left: 0;
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
-.slider img.slide.after {
-  opacity: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.thumbnail {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-#thumbnails-container {
+/* Hero section styles */
+.hero {
+  height: 90vh;
   display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  position: relative; /* Add position relative */
-  z-index: 9998; /* Set a high z-index */
-  margin-top: -23vh; /* Add margin between slider and thumbnails */
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0 40px;
 }
 
-.click-me {
-	font-family: 'Montserrat', sans-serif; /* Apply the 'Montserrat' font */
-	color: #007bff; /* Change text color to blue */
-	text-align: center;
-	font-size: 1.2rem;
-	margin: 4vh;
-	z-index: 9999;
-	cursor: pointer;
-	transition: transform 0.3s ease, color 0.3s ease;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- }
-
-  
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.hero-text {
+  max-width: 500px;
+  text-align: center;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* Slider styles */
 .showcase-container {
   display: flex;
   flex-direction: column;
@@ -101,9 +82,208 @@ body {
 .slider {
   position: relative;
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
-  height: 80vh; /* Adjusted height for slider */
-  margin-bottom: 1%; /* Add margin between slider and thumbnails */
+  height: 90vh;
+  margin-bottom: 0px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.group {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Thumbnails styles */
+#thumbnails-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20vh;
+  margin-bottom: 20vh;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Waitlist form styles */
+.waitlist {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.waitlist h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.waitlist input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.waitlist button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.waitlist button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #343a40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links a {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    margin-bottom: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .waitlist {
+    padding: 20px;
+  }
+
+  .footer-links a {
+    font-size: 20px;
+    margin: 0 5px;
+  }
 }

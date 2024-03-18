@@ -1,9 +1,6 @@
 // IMAGE SLIDER
 const groups = document.querySelectorAll(".slider .group");
 const thumbnailsContainer = document.getElementById("thumbnails-container");
-const prevButton = document.getElementById("prevButton");
-const nextButton = document.getElementById("nextButton");
-
 let groupIndex = 0;
 let slideIndex = 0;
 

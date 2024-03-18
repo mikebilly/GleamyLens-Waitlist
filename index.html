@@ -1,139 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to GleamyLens</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-
-
-  <style>
-    /* Reset CSS */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Body styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Header styles */
-    header {
-      background-color: #343a40;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    header h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-top: 10px;
-    }
-
-    /* Waitlist form styles */
-    .waitlist {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      margin: 0 auto;
-      margin-top: 20px;
-	  margin-bottom: 20px;
-    }
-
-    .waitlist h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .waitlist input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .waitlist button[type="submit"] {
-      background-color: #007bff;
-      color: #fff;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .waitlist button[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-
-    /* Responsive styles */
-    @media screen and (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header h2 {
-        font-size: 1.2rem;
-      }
-      .waitlist {
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Welcome to GleamyLens</h1>
-    <h2>Add magical bokeh to your images.</h2>
-  </header>
-
-  <div class="showcase-container">
-    <div class="slider">
-	  <p class="click-me">Click on the image to see before and after</p>
-      <div class="slides">
-        <div class="group">
-          <img class="slide before" src="assets/showcase/1_before.jpg" alt="Image #1" />
-          <img class="slide after" src="assets/showcase/1_after.jpg" alt="Image #2" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to GleamyLens</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    />
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Welcome to GleamyLens</h1>
         </div>
-        <div class="group">
-          <img class="slide before" src="assets/showcase/9_before.png" alt="Image #1" />
-          <img class="slide after" src="assets/showcase/9_after.jpg" alt="Image #2" />
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Add magical bokeh to your images</h2>
+          <div class="waitlist">
+            <h3>Join the Waitlist</h3>
+            <form name="contact" netlify>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit" class="btn">Join Now</button>
+            </form>
+          </div>
+        </div>
+        <div class="showcase-container">
+          <div class="slider">
+            <div class="slides">
+              <div class="group">
+                <img
+                  class="slide before"
+                  src="assets/showcase/1_before.jpg"
+                  alt="Image #1"
+                />
+                <img
+                  class="slide after"
+                  src="assets/showcase/1_after.jpg"
+                  alt="Image #2"
+                />
+              </div>
+              <div class="group">
+                <img
+                  class="slide before"
+                  src="assets/showcase/9_before.png"
+                  alt="Image #1"
+                />
+                <img
+                  class="slide after"
+                  src="assets/showcase/9_after.jpg"
+                  alt="Image #2"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="thumbnails-container"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
-    </div>
-    <div id="thumbnails-container"></div>
-  </div>
+      <p>&copy; 2024 GleamyLens. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+      const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links a");
 
-  <section class="waitlist">
-    <h3>Join the Waitlist</h3>
-    <form name="contact" netlify>
-      <p>
-        <input type="email" name="email" placeholder="Your email" required />
-      </p>
-      <p>
-        <button type="submit">Join Now</button>
-      </p>
-    </form>
-  </section>
+        burger.addEventListener("click", () => {
+          // Toggle nav
+          nav.classList.toggle("nav-active");
 
-  <script src="index.js"></script>
-</body>
+          // Animate links
+          navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.3
+              }s`;
+            }
+          });
+
+          // Burger animation
+          burger.classList.toggle("toggle");
+        });
+      };
+
+      navSlide();
+    </script>
+  </body>
 </html>
