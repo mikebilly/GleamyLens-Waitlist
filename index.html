@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to GleamyLens</title>
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-    />
-    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
     <header>
@@ -17,26 +15,16 @@
         <div class="logo">
           <h1>Welcome to GleamyLens</h1>
         </div>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
       </nav>
     </header>
     <main>
       <section class="hero">
         <div class="hero-text">
-          <h2>Add magical bokeh to your images</h2>
+          <h2>Add magical bokeh to your images! ✨</h2>
           <div class="waitlist">
             <h3>Join the Waitlist</h3>
             <form name="contact" netlify>
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-              />
+              <input type="email" name="email" placeholder="Your email" required />
               <button type="submit" class="btn">Join Now</button>
             </form>
           </div>
@@ -44,30 +32,46 @@
         <div class="showcase-container">
           <div class="slider">
             <div class="slides">
-              <div class="group">
-                <img
-                  class="slide before"
-                  src="assets/showcase/1_before.jpg"
-                  alt="Image #1"
-                />
-                <img
-                  class="slide after"
-                  src="assets/showcase/1_after.jpg"
-                  alt="Image #2"
-                />
-              </div>
-              <div class="group">
-                <img
-                  class="slide before"
-                  src="assets/showcase/9_before.png"
-                  alt="Image #1"
-                />
-                <img
-                  class="slide after"
-                  src="assets/showcase/9_after.jpg"
-                  alt="Image #2"
-                />
-              </div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/9_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/9_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/10_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/10_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/1_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/1_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/7_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/7_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/8_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/8_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/5_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/5_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/6_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/6_after.jpg" alt="After Image" />
+				</div>
+				<div class="group">
+				  <div class="overlay">Click on the image</div>
+				  <img class="slide before" src="assets/showcase/2_before.jpg" alt="Before Image" />
+				  <img class="slide after" src="assets/showcase/2_after.jpg" alt="After Image" />
+				</div>
             </div>
           </div>
           <div id="thumbnails-container"></div>
@@ -76,40 +80,18 @@
     </main>
     <footer>
       <div class="footer-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100016016771030" class="social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:gleamylens@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/GleamyLens" class="social-link" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
       <p>&copy; 2024 GleamyLens. All rights reserved.</p>
     </footer>
     <script src="index.js"></script>
-    <script>
-      const navSlide = () => {
-        const burger = document.querySelector(".burger");
-        const nav = document.querySelector(".nav-links");
-        const navLinks = document.querySelectorAll(".nav-links a");
-
-        burger.addEventListener("click", () => {
-          // Toggle nav
-          nav.classList.toggle("nav-active");
-
-          // Animate links
-          navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-              link.style.animation = "";
-            } else {
-              link.style.animation = `navLinkFade 0.5s ease forwards ${
-                index / 7 + 0.3
-              }s`;
-            }
-          });
-
-          // Burger animation
-          burger.classList.toggle("toggle");
-        });
-      };
-
-      navSlide();
-    </script>
   </body>
 </html>
