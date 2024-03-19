@@ -67,8 +67,8 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 1000px;
-  width: 500px;
+  height: 548px;
+  width: 533px;
   max-height: 85vh;
 }
 
@@ -105,12 +105,7 @@ nav {
   z-index: 1000000;
 }
 
-.group {
-  flex: 0 0 100%;
-  height: 100%;
-  position: relative;
-  display: none;
-}
+
 
 
 /* Thumbnails styles */
@@ -218,10 +213,6 @@ footer p {
     opacity: 0;
   }
 
-  .burger {
-    display: block;
-  }
-
   .nav-active {
     transform: translateX(0%);
   }
@@ -277,13 +268,17 @@ footer p {
     margin: 0 5px;
   }
   
+  
+  
  .showcase-container {
-    width: 70vw;
+	height: 429px;
+	max-height: 65vh;
+    width: 90vw;
  }
 
 .overlay {
   position: absolute;
-  top: 20%; /* Adjust top position */
+  top: 6.5%; /* Adjust top position */
   left: 50%; /* Adjust left position */
   transform: translate(-50%, -50%); /* Center the overlay */
   color: white;
@@ -314,36 +309,32 @@ footer p {
   transform: scale(1.1);
 }
 
-.group {
-  position: relative;
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  max-height: 85vh; /* Set max-height */
-  overflow: hidden; /* Hide overflow */
-  margin-bottom: 20px; /* Add margin between groups */
-
-  position: relative;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  max-height: 85vh;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
 .slide {
   position: absolute;
-  top: 0;
+  /* top: 0; */
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   transition: opacity 0.5s ease-in-out;
   border-radius: 10px;
   padding: 0%;
-  max-width: 100%;
   cursor: pointer;
 }
 
+.group {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align items to the top */
+  align-items: center; /* Center items horizontally */
+  max-height: 85vh;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
